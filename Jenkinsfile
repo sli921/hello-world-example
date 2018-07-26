@@ -1,6 +1,6 @@
 pipeline {
   agent {
-      docker { image 'slave' }
+      docker { image 'slave', args '--volumes-from jenkins'}
   }
   stages {
     stage('Build') {
